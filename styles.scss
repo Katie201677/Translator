@@ -1,0 +1,86 @@
+$font-heading: 'Encode Sans SC', sans-serif;
+$font-body: cursive;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-body;
+  text-align: center;
+}
+
+.h1 {
+  font-family: $font-heading;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.language-selector {
+  border: 2px solid black;
+  border-radius: 3px;
+  height: 100px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  width: 40%;
+
+  &__label {
+    font-family: $font-heading;
+  }
+  
+  &__select {
+    display: block;
+    font-family: inherit;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.word-input {
+  border: 2px solid black;
+  border-radius: 3px;
+  height: 100px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  width: 40%;
+
+  &__label {
+    display: block;
+    font-family: $font-heading;
+  }
+
+  &__input {
+    font-family: inherit;
+  }
+}
+
+.output {
+  border: 2px solid black;
+  border-radius: 3px;
+  height: 100px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  width: 40%;
+
+  &__heading {
+    font-family: $font-heading;
+    margin-bottom: 10px;
+  }
+}
+
+.refreshButton {
+  padding: 20px;
+}
+
+.button {
+  font-family: $font-heading;
+  padding: 5px;
+}

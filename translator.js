@@ -17,8 +17,8 @@ class FrenchTranslator extends Translator {
 
   translateWord(input) {
     let translatedWord;
-    if(input === "hello") {
-      translatedWord = "bonjour";
+    if(input.toLowerCase() === "hello") {
+      translatedWord = "Bonjour";
     } else {
       translatedWord = "not found";
     }

@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: cursive;
+  text-align: center;
+}
+
+.h1 {
+  font-family: "Encode Sans SC", sans-serif;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.language-selector {
+  border: 2px solid black;
+  border-radius: 3px;
+  height: 100px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  width: 40%;
+}
+.language-selector__label {
+  font-family: "Encode Sans SC", sans-serif;
+}
+.language-selector__select {
+  display: block;
+  font-family: inherit;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.word-input {
+  border: 2px solid black;
+  border-radius: 3px;
+  height: 100px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  width: 40%;
+}
+.word-input__label {
+  display: block;
+  font-family: "Encode Sans SC", sans-serif;
+}
+.word-input__input {
+  font-family: inherit;
+}
+
+.output {
+  border: 2px solid black;
+  border-radius: 3px;
+  height: 100px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  width: 40%;
+}
+.output__heading {
+  font-family: "Encode Sans SC", sans-serif;
+  margin-bottom: 10px;
+}
+
+.refreshButton {
+  padding: 20px;
+}
+
+.button {
+  font-family: "Encode Sans SC", sans-serif;
+  padding: 5px;
+}

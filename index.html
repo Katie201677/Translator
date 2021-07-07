@@ -6,17 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Translator</title>
   <script src="./main.js" defer type="module"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>Translator</h1>
+    <h1 class="h1">JavaScript Translator</h1>
   </header>
   <main>
 
     <form action="" class="form">
 
       <div class="language-selector">
-        <label for="language-selector">Choose a translator:</label>
+        <label for="language-selector" class="language-selector__label">Choose a translator:</label>
         <select id="language-selector" class="language-selector__select">
           <option value="">--Please choose a language--</option>
           <option value="Morse Code">Morse Code</option>
@@ -25,19 +29,20 @@
       </div>
 
       <div class="word-input">
-        <label for="input">English word to translate:</label>
+        <label for="input" class="word-input__label">English word to translate:</label>
         <input type="text" id="input" class="word-input__input">
-        <input type="submit" class="word-input__submit">
+        <input type="submit" class="word-input__submit button">
       </div>
-      
+
     </form>
 
     <div class="output">
+      <h4 class="output__heading">Translation:</h4>
       <p class="output__p"></p>
     </div>
 
-    <div class="refreshButton">
-      <button class="refreshButton__button">Translate another word</button>
+    <div class="refresh-button">
+      <button class="refresh-button__button button">Translate another word</button>
     </div>
 
   </main>

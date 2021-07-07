@@ -3,7 +3,7 @@ import { MorseCodeTranslator, FrenchTranslator } from './translator.js';
 const inputBox = document.querySelector(".word-input__input");
 const languageSelector = document.querySelector(".language-selector__select");
 const outputBox = document.querySelector(".output__p");
-const resetButton = document.querySelector(".refreshButton__button");
+const resetButton = document.querySelector(".refresh-button__button");
 const submitButton = document.querySelector(".word-input__submit");
 
 let inputValue = "";
@@ -28,6 +28,6 @@ submitButton.addEventListener("click", (event) => {
 resetButton.addEventListener("click", () => {
   document.querySelector(".form").reset();
   inputValue = "";
-  translator = null;
+  translator = "";
   languageSelection = "";
 })
