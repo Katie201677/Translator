@@ -26,7 +26,11 @@ describe("Tests for translator classes", () => {
 
     test("translates words with white space", () => {
       expect(englishTestTranslator.translate("DOG CAT")).toBe("-.. --- --. / -.-. .- -");
-    })
+    });
+
+    test("translates words with mix of upper and lower case letter", () => {
+      expect(englishTestTranslator.translate("DoG CAt")).toBe("-.. --- --. / -.-. .- -");
+    });
   })
 
   describe("Morse to English", () => {

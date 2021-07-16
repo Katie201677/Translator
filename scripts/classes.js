@@ -16,7 +16,7 @@
   }
 
   translate(inputString) {
-    const arrayToTranslate = this.createArrayToTranslate(inputString);
+    const arrayToTranslate = this.createArrayToTranslate(inputString.toUpperCase());
     console.log(arrayToTranslate);
     let translatedArray = arrayToTranslate.map((letter) => {
       return this.translateLetter(letter);
