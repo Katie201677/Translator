@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Translator</title>
-  <script src="./main.js" defer type="module"></script>
+  <script src="./scripts/main.js" defer type="module"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC&family=Roboto&display=swap" rel="stylesheet">
@@ -22,14 +22,14 @@
       <div class="language-selector">
         <label for="language-selector" class="language-selector__label">Choose a translator:</label>
         <select id="language-selector" class="language-selector__select">
-          <option value="">--Please choose a language--</option>
-          <option value="Morse Code">Morse Code</option>
-          <option value="French">French</option>
+          <option value="">--Please choose--</option>
+          <option value="Morse Code">English to Morse Code</option>
+          <option value="French">Morse Code to English</option>
         </select>
       </div>
 
       <div class="word-input">
-        <label for="input" class="word-input__label">English word to translate:</label>
+        <label for="input" class="word-input__label">Word to translate:</label>
         <input type="text" id="input" class="word-input__input">
         <input type="submit" class="word-input__submit button">
       </div>

@@ -1,0 +1,25 @@
+{
+  "name": "translator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Katie201677/Translator.git"
+  },
+  "author": "Katie Walker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Katie201677/Translator/issues"
+  },
+  "homepage": "https://github.com/Katie201677/Translator#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.14.5"
+  }
+}
