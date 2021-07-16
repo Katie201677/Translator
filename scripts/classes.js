@@ -14,6 +14,16 @@
   translateLetter(letter) {
     return  this.map[letter];
   }
+
+  translate(inputString) {
+    const arrayToTranslate = this.createArrayToTranslate(inputString);
+    console.log(arrayToTranslate);
+    let translatedArray = arrayToTranslate.map((letter) => {
+      return this.translateLetter(letter);
+    });
+    console.log(translatedArray);
+    return translatedArray.join(" ");
+  }
 }
 
 class EnglishToMorseCodeTranslator extends Translator {
@@ -31,8 +41,19 @@ class MorseCodeToEnglishTranslator extends Translator {
   }
 
   createArrayToTranslate(input) {
-     const regex = /\s|\//g;
+    const regex = /([\s\/]+)/g;
     return input.split(regex);
+  }
+
+  translate(inputString) {
+    const arrayToTranslate = this.createArrayToTranslate(inputString);
+    const arrayWithWhiteSpaceRemoved = arrayToTranslate.filter(letter => letter !== " ");
+    console.log(arrayWithWhiteSpaceRemoved);
+    let translatedArray = arrayWithWhiteSpaceRemoved.map((letter) => {
+      return this.translateLetter(letter);
+    });
+    console.log(translatedArray.join(""));
+    return translatedArray.join("");
   }
 }
 

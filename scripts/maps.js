@@ -54,5 +54,6 @@ export const morseToEnglishMap = {
   "-..-": "X",
   "-.--": "Y",
   "--..": "Z",
+  " / ": " ",
   "/": " "
 }
