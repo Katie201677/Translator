@@ -32,8 +32,10 @@ describe("Tests for translator classes", () => {
       expect(englishTestTranslator.translate("DoG CAt")).toBe("-.. --- --. / -.-. .- -");
     });
 
-    test("valid characters only", () => {
-      expect(englishTestTranslator.isValid("4df5")).toBe(false);
+    test("throws error for invalid letter", () => {
+      expect(() => {
+        englishTestTranslator.translateLetter("3")
+     }).toThrowError("3 is not a valid input.");
     })
   })
 
@@ -56,16 +58,10 @@ describe("Tests for translator classes", () => {
       expect(morseTestTranslator.translateLetter("/")).toBe(" ")
     });
 
-    test("translates word", () => {
-      expect(morseTestTranslator.translate("-.. --- --. / -.-. .- -")).toBe("DOG CAT");
-    });
-
-    test("valid characters only", () => {
-      expect(morseTestTranslator.isValid("a6..-")).toBe(false);
-    });
-
-    test("valid characters only", () => {
-      expect(morseTestTranslator.isValid(".-.-.-.-")).toBe(true);
-    });
+    test("throws error for invalid letter", () => {
+      expect(() => {
+        morseTestTranslator.translateLetter("3")
+     }).toThrowError("3 is not a valid input.");
+    })
   })
 })

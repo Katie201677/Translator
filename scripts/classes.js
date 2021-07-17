@@ -35,10 +35,6 @@ class EnglishToMorseCodeTranslator extends Translator {
     // then call super to pass this map up to parent constructor (i.e. as the argument to the parent constructor) as in another context the parent might be doing something to map (e.g. verifying) rather than just returning the argument.
     super(map); // call the parent constructor with map as the argument
   }
-  isValid(inputString) {
-    const regexValidCharacters = /^[a-zA-Z\s]+$/g;
-    return regexValidCharacters.test(inputString);
-  }
 }
 
 class MorseCodeToEnglishTranslator extends Translator {
@@ -50,11 +46,6 @@ class MorseCodeToEnglishTranslator extends Translator {
   createArrayToTranslate(input) {
     const regex = /([\s\/]+)/g;
     return input.split(regex);
-  }
-
-  isValid(inputString) {
-    const regexValidCharacters = /^[\.\/\s-]+$/g;
-    return regexValidCharacters.test(inputString);
   }
 
   translate(inputString) {
