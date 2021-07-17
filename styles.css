@@ -76,3 +76,7 @@ body {
   font-family: "Encode Sans SC", sans-serif;
   padding: 5px;
 }
+
+.invalid-input-message {
+  display: none;
+}

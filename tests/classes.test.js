@@ -31,6 +31,10 @@ describe("Tests for translator classes", () => {
     test("translates words with mix of upper and lower case letter", () => {
       expect(englishTestTranslator.translate("DoG CAt")).toBe("-.. --- --. / -.-. .- -");
     });
+
+    test("valid characters only", () => {
+      expect(englishTestTranslator.isValid("4df5")).toBe(false);
+    })
   })
 
   describe("Morse to English", () => {
@@ -54,8 +58,14 @@ describe("Tests for translator classes", () => {
 
     test("translates word", () => {
       expect(morseTestTranslator.translate("-.. --- --. / -.-. .- -")).toBe("DOG CAT");
-    })
+    });
 
+    test("valid characters only", () => {
+      expect(morseTestTranslator.isValid("a6..-")).toBe(false);
+    });
 
+    test("valid characters only", () => {
+      expect(morseTestTranslator.isValid(".-.-.-.-")).toBe(true);
+    });
   })
 })

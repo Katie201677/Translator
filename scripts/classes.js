@@ -4,14 +4,15 @@
   constructor(map) {
     this.map = map;
   } 
-  
-  // add verification to DOM function
 
   createArrayToTranslate(input) {
     return input.split("");
   }
 
   translateLetter(letter) {
+    if (!this.map.hasOwnProperty(letter)) {
+      throw new Error(`${letter} is not a valid input.`);
+    }
     return  this.map[letter];
   }
 
@@ -26,11 +27,17 @@
   }
 }
 
+
+
 class EnglishToMorseCodeTranslator extends Translator {
   constructor() {
     const map = englishToMorseMap;
     // then call super to pass this map up to parent constructor (i.e. as the argument to the parent constructor) as in another context the parent might be doing something to map (e.g. verifying) rather than just returning the argument.
     super(map); // call the parent constructor with map as the argument
+  }
+  isValid(inputString) {
+    const regexValidCharacters = /^[a-zA-Z\s]+$/g;
+    return regexValidCharacters.test(inputString);
   }
 }
 
@@ -43,6 +50,11 @@ class MorseCodeToEnglishTranslator extends Translator {
   createArrayToTranslate(input) {
     const regex = /([\s\/]+)/g;
     return input.split(regex);
+  }
+
+  isValid(inputString) {
+    const regexValidCharacters = /^[\.\/\s-]+$/g;
+    return regexValidCharacters.test(inputString);
   }
 
   translate(inputString) {
