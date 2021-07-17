@@ -1,0 +1,10 @@
+// .refreshButton {
+//   padding: 20px;
+// }
+
+@use "./variables" as *;
+
+.button {
+  font-family: $font-heading;
+  padding: 5px;
+}
