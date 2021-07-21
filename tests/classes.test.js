@@ -63,5 +63,9 @@ describe("Tests for translator classes", () => {
         morseTestTranslator.translateLetter("3")
      }).toThrowError("3 is not a valid input.");
     })
+
+    test("translates Morse to English", () => {
+      expect(morseTestTranslator.translate("... --- ...")).toBe("SOS");
+    })
   })
 })
